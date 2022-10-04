@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather forecast</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/79b911f0dd.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <div class="row cities-links"> 
+            <div class="col d-flex justify-content-around">
+              <a href="#" id="tel-aviv-link">New York</a>
+            </div>   
+            <div class="col d-flex justify-content-around">
+              <a href="#" id="new-york-link">Kyiv</a>
+            </div>        
+            <div class="col d-flex justify-content-around">
+              <a href="#" id="london-link">London</a>
+            </div>
+            <div class="col d-flex justify-content-around">
+              <a href="#" id="paris-link">Paris</a>
+            </div> 
+            <div class="col d-flex justify-content-around">
+              <a href="#" id="sydney-link">Tokyo</a>
+            </div>
+            <div class="col d-flex justify-content-around">
+              <a href="#" id="tokyo-link">Sydney</a>
+            </div>            
+          </div>
+          <div class="search-form">
+            <form class="d-flex justify-content-around" id="searching-form">
+              <input
+                type="text"
+                class="search-input"
+                placeholder="Enter a location name"
+                autocomplete="off"
+              />
+              <input
+                type="image"
+                src="images/search.png"
+                alt="Search location"
+                title="Search location"
+                class="submit-button"
+              />
+              <input
+                type="image"
+                class="current-location-button"
+                src="images/location.png"
+                alt="Current location"
+                title="Current location"
+              />
+            </form>
+          </div>
+          <div class="search-results">
+            <div class="row search-results-main">
+              <div class="col-sm-6 current-weather-main">
+                <p class="temperature-part">
+                  <strong id="day-temperature">12</strong>
+                  <small class="unit">°C</small>
+                </p>
+                <p id="weather-description">overcast clouds</p>
+                <img
+                  src="images/cloud.png"
+                  alt="overcast clouds"
+                  id="current-weather-icon"
+                />
+              </div>
+              <div class="col-sm-6">
+                <h1 id="current-city">Kyiv, UA</h1>
+                <p class="last-update">Last update at:</p>
+                <p class="current-date" id="date">Monday, 3 October, 18:18</p>
+                <ul class="current-weather-details">
+                  <li>
+                    <span class="details-icon"><i class="fa-solid fa-temperature-half"></i></span>
+                    Feels like:
+                    <span id="feels-like">11</span
+                    ><span id="feels-like-unit">°C</span>
+                  </li>
+                  <li>
+                    <span class="details-icon"><i class="fa-solid fa-droplet"></i></span>
+                    Humidity:
+                    <span id="humidity">81</span>%
+                  </li>
+                  <li>
+                    <span class="details-icon"><i class="fa-solid fa-wind"></i></span>
+                    Wind:
+                    <span id="wind">0</span> m/s
+                  </li>
+                  <li>
+                    <span class="details-icon"><i class="fa-solid fa-arrows-down-to-line"></i></span>
+                    Pressure:
+                    <span id="pressure">987</span> hPa
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="hourly-weather" id="hourly-weather">
+            <div class="row">
+              <div class="col flex-wrap">
+                <div class="weather-hour">18</div>
+                <img
+                  src="images/sunCloud.png"
+                  alt="overcast clouds"
+                  class="hourly-weather-icon"
+                />
+                <div class="hourly-temperature">12°</div>
+              </div>
+              <div class="col flex-wrap">
+                <div class="weather-hour">19</div>
+                <img
+                  src="images/sunCloud.png"
+                  alt="overcast clouds"
+                  class="hourly-weather-icon"
+                />
+                <div class="hourly-temperature">12°</div>
+              </div>
+              <div class="col flex-wrap">
+                <div class="weather-hour">20</div>
+                <img
+                  src="images/cloud.png"
+                  alt="light rain"
+                  class="hourly-weather-icon"
+                />
+                <div class="hourly-temperature">11°</div>
+              </div>
+              <div class="col flex-wrap">
+                <div class="weather-hour">21</div>
+                <img
+                  src="images/cloud.png"
+                  alt="light rain"
+                  class="hourly-weather-icon"
+                />
+                <div class="hourly-temperature">11°</div>
+              </div>
+              <div class="col flex-wrap">
+                <div class="weather-hour">22</div>
+                <img
+                  src="images/cloud.png"
+                  alt="light rain"
+                  class="hourly-weather-icon"
+                />
+                <div class="hourly-temperature">10°</div>
+              </div>
+              <div class="col flex-wrap">
+                <div class="weather-hour">23</div>
+                <img
+                  src="images/cloud.png"
+                  alt="light rain"
+                  class="hourly-weather-icon"
+                />
+                <div class="hourly-temperature">9°</div>
+              </div>
+              <div class="col flex-wrap">
+                <div class="weather-hour">00</div>
+                <img
+                  src="images/cloud.png"
+                  alt="light rain"
+                  class="hourly-weather-icon"
+                />
+                <div class="hourly-temperature">7°</div>
+              </div>
+              <div class="col flex-wrap">
+                <div class="weather-hour">01</div>
+                <img
+                  src="images/cloud.png"
+                  alt="light rain"
+                  class="hourly-weather-icon"
+                />
+                <div class="hourly-temperature">7°</div>
+              </div>
+              <div class="col flex-wrap">
+                <div class="weather-hour">02</div>
+                <img
+                  src="images/cloud.png"
+                  alt="light rain"
+                  class="hourly-weather-icon"
+                />
+                <div class="hourly-temperature">8°</div>
+              </div>
+              <div class="col flex-wrap">
+                <div class="weather-hour">03</div>
+                <img
+                  src="images/cloud.png"
+                  alt="light rain"
+                  class="hourly-weather-icon"
+                />
+                <div class="hourly-temperature">7°</div>
+              </div>
+              <div class="col flex-wrap">
+                <div class="weather-hour">04</div>
+                <img
+                  src="images/cloud.png"
+                  alt="light rain"
+                  class="hourly-weather-icon"
+                />
+                <div class="hourly-temperature">8°</div>
+              </div>
+              <div class="col flex-wrap">
+                <div class="weather-hour">05</div>
+                <img
+                  src="images/cloud.png"
+                  alt="light rain"
+                  class="hourly-weather-icon"
+                />
+                <div class="hourly-temperature">8°</div>
+              </div>
+            </div>
+          </div>
+          <div class="forecast" id="forecast">
+            <div class="row">
+              <div class="col flex-wrap">
+                <div class="forecast-day">Mon</div>
+                <img
+                  src="images/sunCloud.png"
+                  alt="moderate rain"
+                  class="forecast-icon"
+                />
+                <div class="forecast-temperatures">
+                  <span class="forecast-temperature-max">12°</span>
+                  <span class="forecast-temperature-min">8°</span>
+                </div>
+              </div>
+              <div class="col flex-wrap">
+                <div class="forecast-day">Tue</div>
+                <img
+                  src="images/cloud.png"
+                  alt="light rain"
+                  class="forecast-icon"
+                />
+                <div class="forecast-temperatures">
+                  <span class="forecast-temperature-max">10°</span>
+                  <span class="forecast-temperature-min">7°</span>
+                </div>
+              </div>
+              <div class="col flex-wrap">
+                <div class="forecast-day">Wed</div>
+                <img
+                  src="images/sunRain.png"
+                  alt="overcast clouds"
+                  class="forecast-icon"
+                />
+                <div class="forecast-temperatures">
+                  <span class="forecast-temperature-max">13°</span>
+                  <span class="forecast-temperature-min">7°</span>
+                </div>
+              </div>
+              <div class="col flex-wrap">
+                <div class="forecast-day">Thu</div>
+                <img
+                  src="images/lightning.png"
+                  alt="broken clouds"
+                  class="forecast-icon"
+                />
+                <div class="forecast-temperatures">
+                  <span class="forecast-temperature-max">18°</span>
+                  <span class="forecast-temperature-min">10°</span>
+                </div>
+              </div>
+              <div class="col flex-wrap">
+                <div class="forecast-day">Fri</div>
+                <img
+                  src="images/rain.png"
+                  alt="clear sky"
+                  class="forecast-icon"
+                />
+                <div class="forecast-temperatures">
+                  <span class="forecast-temperature-max">17°</span>
+                  <span class="forecast-temperature-min">11°</span>
+                </div>
+              </div>
+              <div class="col flex-wrap">
+                <div class="forecast-day">Sat</div>
+                <img
+                  src="images/sun.png"
+                  alt="few clouds"
+                  class="forecast-icon"
+                />
+                <div class="forecast-temperatures">
+                  <span class="forecast-temperature-max">18°</span>
+                  <span class="forecast-temperature-min">9°</span>
+                </div>
+              </div>
+              <div class="col flex-wrap">
+                <div class="forecast-day">Sun</div>
+                <img
+                  src="images/sun.png"
+                  alt="few clouds"
+                  class="forecast-icon"
+                />
+                <div class="forecast-temperatures">
+                  <span class="forecast-temperature-max">18°</span>
+                  <span class="forecast-temperature-min">9°</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="made-by">
+          This project was coded by
+          <a
+            href="https://www.instagram.com/fierydreamnika/"
+            title="SheCodes profile"
+            target="_blank"
+            class="made-by-name"
+            >Tetiana Tatarova</a
+          >
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

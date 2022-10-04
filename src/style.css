@@ -1,0 +1,140 @@
+body {
+    background-image: url(../images/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain;
+}
+.weather-app-wrapper {
+    max-width: 750px;
+    margin: 20px auto;
+}
+.weather-app {
+    border: 2px solid #1e2022;
+    background: rgb(242, 242, 242, .8);
+    border-radius: 10px;
+    padding: 30px;    
+    box-shadow: 9px 9px 5px rgb(50 50 50 / 30%);
+}
+.cities-links {
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 17px;
+    margin: 10px;
+}
+a {
+    color: #52616b !important;
+    text-decoration: none !important;
+    font-style: italic;
+    font-weight: bold;
+}
+a:hover {
+    color: #1e2022 !important;
+    text-decoration: underline !important;
+}
+.search-form {
+    padding: 5px 5px 10px 5px;
+    text-align: center;
+    margin: 0 15px;
+}
+input[type="text"] {
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 1px solid #52616b;
+    border-radius: 30px;
+    width: 580px;
+    text-align: center;
+    transition: all 200ms ease-in;
+}
+.submit-button {
+    margin-left: 10px;
+}
+.search-results-main {
+    margin-top: 10px;
+    text-align: center;
+}
+.temperature-part {
+    margin-top: 45px;
+    line-height: 0.7;
+}
+#day-temperature {
+    font-size: 150px;
+    font-weight: 600;
+}
+.unit {
+    font-size: 27px;
+    font-weight: 700;
+    position: relative;
+    top: -55px;
+}
+#weather-description {
+    font-size: 23px;
+    margin-bottom: 5px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+#current-weather-icon {
+    width: 80px;
+}
+#current-city {
+    text-transform: uppercase;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+.last-update {
+    font-size: 16px;
+    font-style: italic;
+    margin: 0;
+    padding: 0;
+}
+.current-date {
+    font-size: 20px;
+    color: #52616b;
+    margin: 0;
+    font-style: italic;
+    font-weight: bold;
+}
+.current-weather-details {
+    border: 1px solid #52616b;
+    border-radius: 10px;
+    height: auto;
+    margin: 10px;
+    padding: 12px;
+    line-height: 2;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.details-icon {
+    width: 30px;
+    text-align: center;
+    display: inline-block;
+}
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+.hourly-weather {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.4);
+    margin: 15px 0;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #52616b;
+}
+.hourly-weather-icon {
+    width: 30px;
+}
+.forecast {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.4);
+    margin: 15px 0;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #52616b;
+}
+.made-by {
+    margin-top: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+}
