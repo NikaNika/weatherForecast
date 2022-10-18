@@ -34,20 +34,24 @@ function formatDate(date) {
 currentDate.innerHTML = `${formatDate(new Date())}`;
 
 // display weather
-function displayWeather(response) {  
-  document.querySelector('#current-city').innerHTML = response.data.name;
+function displayWeather(response) {
+	document.querySelector('#current-city').innerHTML = response.data.name;
 	document.querySelector('#day-temperature').innerHTML = Math.round(
 		response.data.main.temp
 	);
 	document.querySelector('#feels-like').innerHTML = Math.round(
-		response.data.main.feels_like);
+		response.data.main.feels_like
+	);
 	document.querySelector('#humidity').innerHTML = response.data.main.humidity;
 	document.querySelector('#pressure').innerHTML = response.data.main.pressure;
 	document.querySelector('#wind').innerHTML = Math.round(
 		response.data.wind.speed
 	);
 	document.querySelector('#weather-description').innerHTML =
-		response.data.weather[0].main;
+		response.data.weather[0].main;	
+	document.querySelector(
+		'#current-weather-icon'
+	).src = `images/${response.data.weather[0].main}.png`;
 }
 
 function searchCity(cityName) {
@@ -63,9 +67,8 @@ searchCity('Kyiv');
 // quick city selection
 
 function quickCitySelection(e) {
-  e.preventDefault();
-  console.log(e);
-  searchCity(e.target.innerHTML);
+	e.preventDefault();	
+	searchCity(e.target.innerHTML);
 }
 
 let newYorkLink = document.querySelector('#new-york-link');
@@ -94,8 +97,8 @@ function changeCity(event) {
 	let input = document.querySelector('.search-input');
 	if (input.value.length !== 0) {
 		currentCity.innerHTML = `${input.value}`;
-  }
-  searchCity(input.value);
+	}
+	searchCity(input.value);
 	searchingForm.reset();
 }
 
@@ -130,12 +133,20 @@ fahrenheit.addEventListener('click', convertToFahrenheit);
 
 function convertToFahrenheit(event) {
 	event.preventDefault();
-	var dayTemperature = document.querySelector('#day-temperature');
-	dayTemperature.innerHTML = 66;
+	let dayTemperature = document.querySelector('#day-temperature');
+	dayTemperature.innerHTML = Math.round(
+		(dayTemperature.innerHTML * 9) / 5 + 32
+	);
+	fahrenheit.classList.add('selected');
+	celsius.classList.remove('selected');
 }
 
 function convertToCelsius(event) {
 	event.preventDefault();
-	var dayTemperature = document.querySelector('#day-temperature');
-	dayTemperature.innerHTML = 19;
+	let dayTemperature = document.querySelector('#day-temperature');
+	dayTemperature.innerHTML = Math.round(
+		((dayTemperature.innerHTML - 32) * 5) / 9
+	);
+	fahrenheit.classList.remove('selected');
+	celsius.classList.add('selected');
 }

@@ -65,6 +65,13 @@ input[type='text'] {
 	position: relative;
 	top: -55px;
 }
+.selected {
+	font-size: 40px;
+	color: #1e2022 !important;
+}
+.selected:hover {
+	color: #52616b !important;
+}
 #weather-description {
 	font-size: 23px;
 	margin-bottom: 5px;
