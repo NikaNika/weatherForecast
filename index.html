@@ -28,10 +28,10 @@
         <div class="weather-app">
           <div class="row cities-links"> 
             <div class="col d-flex justify-content-around">
-              <a href="#" id="tel-aviv-link">New York</a>
+              <a href="#" id="new-york-link">New York</a>
             </div>   
             <div class="col d-flex justify-content-around">
-              <a href="#" id="new-york-link">Kyiv</a>
+              <a href="#" id="kyiv-link">Kyiv</a>
             </div>        
             <div class="col d-flex justify-content-around">
               <a href="#" id="london-link">London</a>
@@ -40,10 +40,10 @@
               <a href="#" id="paris-link">Paris</a>
             </div> 
             <div class="col d-flex justify-content-around">
-              <a href="#" id="sydney-link">Tokyo</a>
+              <a href="#" id="tokyo-link">Tokyo</a>
             </div>
             <div class="col d-flex justify-content-around">
-              <a href="#" id="tokyo-link">Sydney</a>
+              <a href="#" id="sydney-link">Sydney</a>
             </div>            
           </div>
           <div class="search-form">
@@ -74,8 +74,8 @@
             <div class="row search-results-main">
               <div class="col-sm-6 current-weather-main">
                 <p class="temperature-part">
-                  <strong id="day-temperature">12</strong>
-                  <small class="unit">°C</small>
+                  <strong id="day-temperature">19</strong>
+                  <small class="unit"><a a href="#" id="celsius-link">°C</a> | <a href="#" id="fahrenheit-link">°F</a></small>
                 </p>
                 <p id="weather-description">overcast clouds</p>
                 <img
@@ -85,9 +85,9 @@
                 />
               </div>
               <div class="col-sm-6">
-                <h1 id="current-city">Kyiv, UA</h1>
+                <h1 id="current-city">Kyiv</h1>
                 <p class="last-update">Last update at:</p>
-                <p class="current-date" id="date">Monday, 3 October, 18:18</p>
+                <p class="current-date" id="date">Friday, 7 October, 20:52</p>
                 <ul class="current-weather-details">
                   <li>
                     <span class="details-icon"><i class="fa-solid fa-temperature-half"></i></span>
@@ -98,17 +98,17 @@
                   <li>
                     <span class="details-icon"><i class="fa-solid fa-droplet"></i></span>
                     Humidity:
-                    <span id="humidity">81</span>%
+                    <span id="humidity"></span>%
                   </li>
                   <li>
                     <span class="details-icon"><i class="fa-solid fa-wind"></i></span>
                     Wind:
-                    <span id="wind">0</span> m/s
+                    <span id="wind"></span> m/s
                   </li>
                   <li>
                     <span class="details-icon"><i class="fa-solid fa-arrows-down-to-line"></i></span>
                     Pressure:
-                    <span id="pressure">987</span> hPa
+                    <span id="pressure"></span> hPa
                   </li>
                 </ul>
               </div>
@@ -327,5 +327,7 @@
         </p>
       </div>
     </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="src/main.js"></script>
   </body>
 </html>
