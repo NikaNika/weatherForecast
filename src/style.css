@@ -147,6 +147,12 @@ li {
 }
 
 @media only screen and (max-width: 600px) {
+	body {
+		background-image: url(../images/bg.jpg);
+		background-repeat: no-repeat;
+		background-position: center top;
+		background-size: cover;
+	}
 	#day-temperature {
 		font-size: 100px;
 	}
@@ -154,7 +160,7 @@ li {
 		font-size: 10px;
 	}
 
-    .hourly-weather-icon {
-    width: 25px;
-}
+	.hourly-weather-icon {
+		width: 25px;
+	}
 }

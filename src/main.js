@@ -134,9 +134,11 @@ fahrenheit.addEventListener('click', convertToFahrenheit);
 function convertToFahrenheit(event) {
 	event.preventDefault();
 	let dayTemperature = document.querySelector('#day-temperature');
-	dayTemperature.innerHTML = Math.round(
-		(dayTemperature.innerHTML * 9) / 5 + 32
-	);
+	if (celsius.classList.contains('selected')) {
+		dayTemperature.innerHTML = Math.round(
+			(dayTemperature.innerHTML * 9) / 5 + 32
+		);
+	}	
 	fahrenheit.classList.add('selected');
 	celsius.classList.remove('selected');
 }
@@ -144,9 +146,11 @@ function convertToFahrenheit(event) {
 function convertToCelsius(event) {
 	event.preventDefault();
 	let dayTemperature = document.querySelector('#day-temperature');
-	dayTemperature.innerHTML = Math.round(
-		((dayTemperature.innerHTML - 32) * 5) / 9
-	);
+	if (fahrenheit.classList.contains('selected')) {
+		dayTemperature.innerHTML = Math.round(
+			((dayTemperature.innerHTML - 32) * 5) / 9
+		);
+	}		
 	fahrenheit.classList.remove('selected');
 	celsius.classList.add('selected');
 }
