@@ -156,8 +156,9 @@ li {
 	#day-temperature {
 		font-size: 100px;
 	}
-	.cities-links {
-		font-size: 10px;
+	.row.cities-links {
+		font-size: 10px;				
+		align-items: center;
 	}
 
 	.hourly-weather-icon {
